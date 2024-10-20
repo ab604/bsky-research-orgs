@@ -293,7 +293,7 @@ def main():
         searcher = BlueskyOrgSearch()
         
         # Search using the CSV file
-        input_file = "uk_research_orgs.csv"  # The CSV we created earlier
+        input_file = "test_orgs.csv"  # The CSV we created earlier
         output_dir = f"uk_research_orgs_{datetime.now().strftime('%Y-%m-%d_%H-%M')}"
         os.environ['REPORT_DIR'] = output_dir
 
