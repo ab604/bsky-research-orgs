@@ -8,10 +8,6 @@ on:
 permissions:
     contents: write  # Add explicit permission to write to repository 
 
-env:
-  REPORT_DIR: uk_research_orgs_${{ github.run_number }}
- 
-
 jobs:
   bsky_search:
     runs-on: ubuntu-latest
