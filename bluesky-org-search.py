@@ -168,12 +168,11 @@ class BlueskyOrgSearch:
                 current_row.append(min(insertions, deletions, substitutions))
             previous_row = current_row
 
-        return previous_row[-1]
+            return previous_row[-1]
 
     def search_from_csv(self, input_file: str, output_dir: str):
         try:
             # Read organizations from CSV
-            organizations = []
             with open(input_file, 'r', encoding='utf-8') as csvfile:
                 reader = csv.DictReader(csvfile)
                 organizations = list(reader)
@@ -196,83 +195,38 @@ class BlueskyOrgSearch:
 
                     # Write results to a separate CSV file
                     output_file = os.path.join(output_dir, f"{org_name.replace(' ', '_')}.csv")
-                    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
-                        fieldnames = [
-                            'search_term',
-                            'organization_type',
-                            'handle',
-                            'display_name',
-                            'description',
-                            'follower_count',
-                            'following_count',
-                            'posts_count',
-                            'search_date'
-                        ]
-                        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                        writer.writeheader()
+                    try:
+                        with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
+                            fieldnames = [
+                                'search_term', 'organization_type', 'handle', 'display_name',
+                                'description', 'follower_count', 'following_count', 'posts_count', 'search_date'
+                            ]
+                            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                            writer.writeheader()
 
-                        # Write to GITHUB_ENV if it exists
-                        if github_env:
-                            with open(github_env, 'a') as env_file:
-                                env_file.write(f"CSV_{org_name.replace(' ', '_').upper()}_HEADER={','.join(fieldnames)}\n")
+                            if results:
+                                for result in results:
+                                    writer.writerow(result)
+                            else:
+                                writer.writerow({
+                                    'search_term': org_name,
+                                    'organization_type': org_type,
+                                    'handle': 'NO_MATCH_FOUND',
+                                    'display_name': '',
+                                    'description': '',
+                                    'follower_count': 0,
+                                    'following_count': 0,
+                                    'posts_count': 0,
+                                    'search_date': datetime.now().strftime('%Y-%m-%d')
+                                })
 
-                        if results:
-                            for j, result in enumerate(results, 1):
-                                writer.writerow(result)
-
-                                # Write to GITHUB_ENV if it exists
-                                if github_env:
-                                    row_values = [str(result.get(field, '')) for field in fieldnames]
-                                    env_file.write(f"CSV_{org_name.replace(' ', '_').upper()}_ROW_{j}={','.join(row_values)}\n")
-                        else:
-                            writer.writerow({
-                                'search_term': org_name,
-                                'organization_type': org_type,
-                                'handle': 'NO_MATCH_FOUND',
-                                'display_name': '',
-                                'description': '',
-                                'follower_count': 0,
-                                'following_count': 0,
-                                'posts_count': 0,
-                                'search_date': datetime.now().strftime('%Y-%m-%d')
-                            })
-
-                        # Write the row count to GITHUB_ENV
-                        if github_env:
-                            env_file.write(f"CSV_{org_name.replace(' ', '_').upper()}_ROW_COUNT={len(results)}\n")
-
-                    print(f"Results for {org_name} saved to {output_file}")
+                        print(f"Results for {org_name} saved to {output_file}")
+                    except IOError as e:
+                        print(f"Error writing to file {output_file}: {str(e)}")
 
                 except Exception as e:
                     print(f"Error processing {org_name}: {str(e)}")
-                    # Write error to a separate CSV file
-                    output_file = os.path.join(output_dir, f"{org_name.replace(' ', '_')}.csv")
-                    with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
-                        fieldnames = [
-                            'search_term',
-                            'organization_type',
-                            'handle',
-                            'display_name',
-                            'description',
-                            'follower_count',
-                            'following_count',
-                            'posts_count',
-                            'search_date'
-                        ]
-                        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                        writer.writeheader()
-                        writer.writerow({
-                            'search_term': org_name,
-                            'organization_type': org_type,
-                            'handle': 'ERROR',
-                            'display_name': str(e),
-                            'description': '',
-                            'follower_count': 0,
-                            'following_count': 0,
-                            'posts_count': 0,
-                            'search_date': datetime.now().strftime('%Y-%m-%d')
-                        })
-                    print(f"Error occurred for {org_name}. File created: {output_file}")
+                    # Handle error case...
 
                 # Add a delay between organizations to avoid hitting rate limits
                 time.sleep(10)  # Wait for 10 seconds between organizations
@@ -282,9 +236,8 @@ class BlueskyOrgSearch:
         except Exception as e:
             print(f"Error processing file: {str(e)}")
             raise e
-
-
-def main():
+        
+    def main():
     print("Bluesky Organization Search")
     print("--------------------------")
     
