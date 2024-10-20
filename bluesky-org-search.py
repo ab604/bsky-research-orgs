@@ -168,7 +168,7 @@ class BlueskyOrgSearch:
                 current_row.append(min(insertions, deletions, substitutions))
             previous_row = current_row
 
-            return previous_row[-1]
+        return previous_row[-1]
 
     def search_from_csv(self, input_file: str, output_dir: str):
         try:
@@ -176,23 +176,23 @@ class BlueskyOrgSearch:
             with open(input_file, 'r', encoding='utf-8') as csvfile:
                 reader = csv.DictReader(csvfile)
                 organizations = list(reader)
-
+    
             # Create the output directory if it doesn't exist
             os.makedirs(output_dir, exist_ok=True)
-
+    
             # Get the GITHUB_ENV file path
             github_env = os.environ.get('GITHUB_ENV')
-
+    
             # Search for each organization
             total = len(organizations)
             for i, org in enumerate(organizations, 1):
                 org_name = org['organization_name']
                 org_type = org['type']
                 print(f"Searching {i}/{total}: {org_name} ({org_type})")
-
+    
                 try:
                     results = self.search_organization(org_name, org_type)
-
+    
                     # Write results to a separate CSV file
                     output_file = os.path.join(output_dir, f"{org_name.replace(' ', '_')}.csv")
                     try:
@@ -203,7 +203,7 @@ class BlueskyOrgSearch:
                             ]
                             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                             writer.writeheader()
-
+    
                             if results:
                                 for result in results:
                                     writer.writerow(result)
@@ -219,25 +219,26 @@ class BlueskyOrgSearch:
                                     'posts_count': 0,
                                     'search_date': datetime.now().strftime('%Y-%m-%d')
                                 })
-
+    
                         print(f"Results for {org_name} saved to {output_file}")
                     except IOError as e:
                         print(f"Error writing to file {output_file}: {str(e)}")
-
+    
                 except Exception as e:
                     print(f"Error processing {org_name}: {str(e)}")
                     # Handle error case...
-
+    
                 # Add a delay between organizations to avoid hitting rate limits
                 time.sleep(10)  # Wait for 10 seconds between organizations
-
+    
             print(f"\nSearch completed! Results saved to {output_dir}")
-
+    
         except Exception as e:
             print(f"Error processing file: {str(e)}")
             raise e
-        
-    def main():
+
+
+def main():
     print("Bluesky Organization Search")
     print("--------------------------")
     
@@ -246,7 +247,7 @@ class BlueskyOrgSearch:
         searcher = BlueskyOrgSearch()
         
         # Search using the CSV file
-        input_file = "test_orgs.csv"  # The CSV we created earlier
+        input_file = "_orgs.csv"  # The CSV we created earlier
         output_dir = f"uk_research_orgs_{datetime.now().strftime('%Y-%m-%d_%H-%M')}"
         os.environ['REPORT_DIR'] = output_dir
 
