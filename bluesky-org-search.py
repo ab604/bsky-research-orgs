@@ -70,8 +70,8 @@ class BlueskyOrgSearch:
         return client
 
     @rate_limit(calls=100, period=86400)  # 1000 calls per 60 minutes
-    def search_organization(self, org_name: str, org_type: str) -> List[Dict]:
-        """Search for an organization and return matching accounts."""
+    def search_organisation(self, org_name: str, org_type: str) -> List[Dict]:
+        """Search for an organisation and return matching accounts."""
         try:
             org_words = re.findall(r'\b\w+\b', org_name.lower())
             org_without_of = ' '.join([word for word in org_words if word != 'of'])
@@ -79,7 +79,7 @@ class BlueskyOrgSearch:
             matched_accounts = []
             cursor = None
             page_count = 0
-            max_pages = 1  # Adjust as needed
+            max_pages = 50  # Adjust as needed
 
             search_term = org_words[0] if org_words else org_name
 
@@ -100,7 +100,7 @@ class BlueskyOrgSearch:
                             self.fuzzy_match(org_name, search_text)):
                             account_info = {
                                 'search_term': org_name,
-                                'organization_type': org_type,
+                                'organisation_type': org_type,
                                 'handle': actor.handle,
                                 'display_name': actor.display_name,
                                 'description': actor.description,
@@ -139,7 +139,7 @@ class BlueskyOrgSearch:
             return []
 
     def fuzzy_match(self, org_name: str, search_text: str) -> bool:
-        """Perform a fuzzy match between the organization name and the search text."""
+        """Perform a fuzzy match between the organisation name and the search text."""
         org_words = org_name.lower().split()
         search_words = search_text.lower().split()
 
@@ -172,10 +172,10 @@ class BlueskyOrgSearch:
 
     def search_from_csv(self, input_file: str, output_dir: str):
         try:
-            # Read organizations from CSV
+            # Read organisations from CSV
             with open(input_file, 'r', encoding='utf-8') as csvfile:
                 reader = csv.DictReader(csvfile)
-                organizations = list(reader)
+                organisations = list(reader)
 
             # Create the output directory if it doesn't exist
             os.makedirs(output_dir, exist_ok=True)
@@ -183,22 +183,22 @@ class BlueskyOrgSearch:
             # Get the GITHUB_ENV file path
             github_env = os.environ.get('GITHUB_ENV')
 
-            # Search for each organization
-            total = len(organizations)
-            for i, org in enumerate(organizations, 1):
-                org_name = org['organization_name']
+            # Search for each organisation
+            total = len(organisations)
+            for i, org in enumerate(organisations, 1):
+                org_name = org['organisation_name']
                 org_type = org['type']
                 print(f"Searching {i}/{total}: {org_name} ({org_type})")
 
                 try:
-                    results = self.search_organization(org_name, org_type)
+                    results = self.search_organisation(org_name, org_type)
 
                     # Write results to a separate CSV file
                     output_file = os.path.join(output_dir, f"{org_name.replace(' ', '_')}.csv")
                     try:
                         with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
                             fieldnames = [
-                                'search_term', 'organization_type', 'handle', 'display_name',
+                                'search_term', 'organisation_type', 'handle', 'display_name',
                                 'description', 'follower_count', 'following_count', 'posts_count', 'search_date'
                             ]
                             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -210,7 +210,7 @@ class BlueskyOrgSearch:
                             else:
                                 writer.writerow({
                                     'search_term': org_name,
-                                    'organization_type': org_type,
+                                    'organisation_type': org_type,
                                     'handle': 'NO_MATCH_FOUND',
                                     'display_name': '',
                                     'description': '',
@@ -228,8 +228,8 @@ class BlueskyOrgSearch:
                     print(f"Error processing {org_name}: {str(e)}")
                     # Handle error case...
 
-                # Add a delay between organizations to avoid hitting rate limits
-                time.sleep(10)  # Wait for 10 seconds between organizations
+                # Add a delay between organisations to avoid hitting rate limits
+                time.sleep(10)  # Wait for 10 seconds between organisations
 
             print(f"\nSearch completed! Results saved to {output_dir}")
 
@@ -239,7 +239,7 @@ class BlueskyOrgSearch:
 
 
 def main():
-    print("Bluesky Organization Search")
+    print("Bluesky organisation Search")
     print("--------------------------")
     
     try:
@@ -247,7 +247,7 @@ def main():
         searcher = BlueskyOrgSearch()
         
         # Search using the CSV file
-        input_file = "uk_research_orgs.csv"  # The CSV we created earlier
+        input_file = "soton.csv"  # Uni csv
         output_dir = "reports"
         os.environ['REPORT_DIR'] = output_dir
 
