@@ -248,7 +248,7 @@ def main():
         
         # Search using the CSV file
         input_file = "test_orgs.csv"  # The CSV we created earlier
-        output_dir = f"uk_research_orgs_{datetime.now().strftime('%Y-%m-%d_%H-%M')}"
+        output_dir = "reports"
         os.environ['REPORT_DIR'] = output_dir
 
         print(f"\nStarting search using {input_file}")
