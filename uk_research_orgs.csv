@@ -1,0 +1,379 @@
+organization_name,type
+University of Oxford,university
+University of Cambridge,university
+Imperial College London,university
+University College London (UCL),university
+University of Edinburgh,university
+University of Manchester,university
+King's College London,university
+London School of Economics (LSE),university
+University of Bristol,university
+University of Warwick,university
+University of Glasgow,university
+University of Birmingham,university
+University of Sheffield,university
+University of Leeds,university
+University of Southampton,university
+University of Nottingham,university
+Queen Mary University of London,university
+University of Liverpool,university
+Durham University,university
+University of York,university
+Cardiff University,university
+Newcastle University,university
+University of Exeter,university
+Queen's University Belfast,university
+University of Aberdeen,university
+University of Sussex,university
+University of Bath,university
+Lancaster University,university
+University of East Anglia,university
+University of Leicester,university
+Loughborough University,university
+University of Reading,university
+St Andrews University,university
+University of Surrey,university
+University of Strathclyde,university
+Heriot-Watt University,university
+Royal Holloway University of London,university
+University of Essex,university
+Aston University,university
+Brunel University London,university
+UK Research and Innovation (UKRI),funding_org
+Engineering and Physical Sciences Research Council (EPSRC),funding_org
+Medical Research Council (MRC),funding_org
+Natural Environment Research Council (NERC),funding_org
+Economic and Social Research Council (ESRC),funding_org
+Biotechnology and Biological Sciences Research Council (BBSRC),funding_org
+Science and Technology Facilities Council (STFC),funding_org
+Arts and Humanities Research Council (AHRC),funding_org
+Research England,funding_org
+Innovate UK,funding_org
+Wellcome Trust,funding_org
+Cancer Research UK,funding_org
+British Heart Foundation,funding_org
+Leverhulme Trust,funding_org
+Nuffield Foundation,funding_org
+Royal Society,funding_org
+British Academy,funding_org
+Royal Academy of Engineering,funding_org
+National Institute for Health Research (NIHR),funding_org
+The Alan Turing Institute,research_org
+Diamond Light Source,research_org
+British Antarctic Survey,research_org
+National Physical Laboratory,research_org
+Rosalind Franklin Institute,research_org
+UK Atomic Energy Authority,research_org
+Francis Crick Institute,research_org
+Faraday Institution,research_org
+Henry Royce Institute,research_org
+Medicines Discovery Catapult,research_org
+Arts and Humanities Research Council ,Funders and research programmes
+Biotechnology and Biological Sciences Research Council,Funders and research programmes
+Engineering and Physical Sciences Research Council,Funders and research programmes
+ESRC,Funders and research programmes
+Joseph Rowntree Foundation ,Funders and research programmes
+MRC,Funders and research programmes
+National Lottery Community Fund,Funders and research programmes
+Natural Environment Research Council,Funders and research programmes
+NIHR Applied Research Collaboration North East & North Cumbria,Funders and research programmes
+NIHR Applied Research Collaboration (ARC) West,Funders and research programmes
+NIHR Applied Research Collaborations (ARCs),Funders and research programmes
+NIHR ARC East Midlands,Funders and research programmes
+NIHR ARC Greater Manchester,Funders and research programmes
+NIHR ARC Kent,Funders and research programmes
+NIHR ARC North Thames,Funders and research programmes
+NIHR ARC North West Coast,Funders and research programmes
+NIHR ARC Northwest London (NWL),Funders and research programmes
+NIHR ARC Oxford and Thames Valley,Funders and research programmes
+NIHR ARC West Midlands,Funders and research programmes
+NIHR ARC Yorkshire & Humber,Funders and research programmes
+NIHR ARC Wessex,Funders and research programmes
+NIHR Bristol Biomedical Research Centre (BRC),Funders and research programmes
+NIHR Research,Funders and research programmes
+Nuffield Foundation ,Funders and research programmes
+PenARC (NIHR ARC South West Peninsula),Funders and research programmes
+Research England,Funders and research programmes
+ResearchProfessional,Funders and research programmes
+Science and Technology Facilities Council ,Funders and research programmes
+UKRI,Funders and research programmes
+Wellcome Trust,Funders and research programmes
+Advance HE,"Charities,Trusts and Non Government"
+British Council ,"Charities,Trusts and Non Government"
+Cochrane,"Charities,Trusts and Non Government"
+Innovate UK,"Charities,Trusts and Non Government"
+Leverhulme Trust,"Charities,Trusts and Non Government"
+Nesta,"Charities,Trusts and Non Government"
+REF 2029,"Charities,Trusts and Non Government"
+Research4Life,"Charities,Trusts and Non Government"
+Resolution Foundation ,"Charities,Trusts and Non Government"
+UKRIO ,"Charities,Trusts and Non Government"
+Academy of Social Sciences,Learned Societies 
+Anotomical Society,Learned Societies 
+Anthropological Society of London,Learned Societies 
+Antiquarian Horological Society,Learned Societies 
+Applied Microbiology International,Learned Societies 
+Aristotelian Society ,Learned Societies 
+Association for Art History,Learned Societies 
+Association for Learning Technology,Learned Societies 
+Association for Psychosocial Studies,Learned Societies 
+Association for Scottish Literature,Learned Societies 
+Association for the Scientific Study of Anomalous Phenomena,Learned Societies 
+Association for Tourism in Higher Education,Learned Societies 
+Association of Social Anthropologists,Learned Societies 
+Astrobiology Society of Britain,Learned Societies 
+BCS,Learned Societies 
+Bibliographical Society,Learned Societies 
+Biochemical Society,Learned Societies 
+British Academy,Learned Societies 
+British Accounting & Finance Association,Learned Societies 
+British Archaeological Association ,Learned Societies 
+British Association for American Studies,Learned Societies 
+British Association for Applied Linguistics,Learned Societies 
+British Association for International & Comparative Education,Learned Societies 
+British Association for Modernist Studies,Learned Societies 
+British Association for Slavonic & East European Studies,Learned Societies 
+British Cartographic Society,Learned Societies 
+British Ecological Society,Learned Societies 
+British Educational Research Association,Learned Societies 
+British Herpetological Society,Learned Societies 
+British International Studies Association,Learned Societies 
+British Interplanetary Society,Learned Societies 
+British Medical Association,Learned Societies 
+British Mycological Society,Learned Societies 
+British Naturalists' Association,Learned Societies 
+British Pharmacological Society,Learned Societies 
+British Psychological Society,Learned Societies 
+British Science Association,Learned Societies 
+British Society of Aesthetics,Learned Societies 
+British Society for Population Studies,Learned Societies 
+British Society for the History of Science,Learned Societies 
+British Society for the Philosophy of Science,Learned Societies 
+British Society of Criminology,Learned Societies 
+British Society of Gerontology,Learned Societies 
+British Sociological Association,Learned Societies 
+British Thoracic Society,Learned Societies 
+Burgon Society,Learned Societies 
+Catholic Record Society,Learned Societies 
+Chartered Institute of Arbitrators,Learned Societies 
+Chartered Institute of Building,Learned Societies 
+Chartered Institution of Civil Engineering Surveyors,Learned Societies 
+Chartered Institute of Ergonomics and Human Factors,Learned Societies 
+Chartered Institute of Environmental Health,Learned Societies 
+Chartered Institute of Linguists,Learned Societies 
+Chartered Institute of Marketing,Learned Societies 
+Chartered Institute of Public Relations,Learned Societies 
+Chartered Institution of Highways and Transportation,Learned Societies 
+Chartered Management Institute,Learned Societies 
+Chartered Society of Designers,Learned Societies 
+Classical Association,Learned Societies 
+Classical Association in Northern Ireland,Learned Societies 
+College of Paramedics,Learned Societies 
+Cybernetics Society,Learned Societies 
+Development Studies Association,Learned Societies 
+Devonshire Association,Learned Societies 
+Economic History Society,Learned Societies 
+Edinburgh Geological Society,Learned Societies 
+English Place-Name Society,Learned Societies 
+European Academy of Occupational Health Psychology,Learned Societies 
+Experimental Psychology Society,Learned Societies 
+The Genetics Society,Learned Societies 
+Geological Society of London,Learned Societies 
+Government Economic Service,Learned Societies 
+Healthcare Infection Society,Learned Societies 
+The Heraldry Society,Learned Societies 
+Heraldry Society of Scotland,Learned Societies 
+International Moving Image Society,Learned Societies 
+Institution of Civil Engineers,Learned Societies 
+Institution of Civil Engineers Scotland,Learned Societies 
+Institute of Mathematics and its Applications,Learned Societies 
+Institute of Measurement and Control,Learned Societies 
+Institution of Mechanical Engineers,Learned Societies 
+Institute of Physics,Learned Societies 
+Institution of Engineering and Technology,Learned Societies 
+Learned Society of Wales,Learned Societies 
+Linnean Society of London,Learned Societies 
+London Mathematical Society,Learned Societies 
+Philological Society,Learned Societies 
+The Mammal Society,Learned Societies 
+Neonatal Society,Learned Societies 
+Newcomen Society,Learned Societies 
+North of England Institute of Mining and Mechanical Engineers,Learned Societies 
+Pathological Society,Learned Societies 
+Philological Society,Learned Societies 
+The Physiological Society,Learned Societies 
+Political Studies Association,Learned Societies 
+Royal Academy of Arts,Learned Societies 
+Royal Academy of Engineering,Learned Societies 
+Royal Aeronautical Society,Learned Societies 
+Royal Anthropological Institute of Great Britain and Ireland,Learned Societies 
+Royal Archaeological Institute,Learned Societies 
+Royal Asiatic Society of Great Britain and Ireland,Learned Societies 
+Royal Astronomical Society,Learned Societies 
+Royal College of Nursing,Learned Societies 
+Royal College of Paediatrics and Child Health,Learned Societies 
+Royal College of Pathologists,Learned Societies 
+Royal College of Physicians and Surgeons Glasgow,Learned Societies 
+Royal College of Physicians of Edinburgh,Learned Societies 
+Royal College of Physicians of Ireland,Learned Societies 
+Royal College of Physicians,Learned Societies 
+Royal College of Speech and Language Therapists,Learned Societies 
+Royal Economic Society,Learned Societies 
+Royal Entomological Society,Learned Societies 
+Royal Geographical Society,Learned Societies 
+Royal Historical Society,Learned Societies 
+Royal Institute of British Architects,Learned Societies 
+Chatham House,Learned Societies 
+Royal Institute of Navigation,Learned Societies 
+Royal Institution of Chartered Surveyors,Learned Societies 
+Royal Institute of Philosophy,Learned Societies 
+Royal Institution,Learned Societies 
+Royal Meteorological Society,Learned Societies 
+Royal Numismatic Society,Learned Societies 
+Royal Pharmaceutical Society,Learned Societies 
+Royal Philatelic Society London,Learned Societies 
+Royal Photographic Society,Learned Societies 
+Royal Scottish Geographical Society,Learned Societies 
+Royal Society for Asian Affairs,Learned Societies 
+Royal Society of Arts,Learned Societies 
+Royal Society of Biology,Learned Societies 
+Royal Society of Chemistry,Learned Societies 
+Royal Society of Edinburgh,Learned Societies 
+Royal Society,Learned Societies 
+Royal Society of Literature,Learned Societies 
+Royal Society of Medicine,Learned Societies 
+Royal Statistical Society,Learned Societies 
+Royal Town Planning Institute,Learned Societies 
+Scottish Economic Society,Learned Societies 
+Selden Society,Learned Societies 
+Social Policy Association,Learned Societies 
+Social Research Association,Learned Societies 
+The Society for Court Studies,Learned Societies 
+Society for Endocrinology,Learned Societies 
+Society for Experimental Biology,Learned Societies 
+Society for Psychical Research,Learned Societies 
+Society for Research into Higher Education,Learned Societies 
+Society for the Promotion of Hellenic Studies,Learned Societies 
+Society for the Promotion of Roman Studies,Learned Societies 
+Society for Underwater Technology,Learned Societies 
+Society of Antiquaries of London,Learned Societies 
+Society of Antiquaries of Scotland,Learned Societies 
+Society of Architectural Historians of Great Britain,Learned Societies 
+The Society of Legal Scholars,Learned Societies 
+Society of Research Software Engineering,Learned Societies 
+UK Academy for Information Systems,Learned Societies 
+Zoological Society of London,Learned Societies 
+CILIP,"Professional bodies, collectives and groups"
+CILIP Scotland,"Professional bodies, collectives and groups"
+FORCE11,"Professional bodies, collectives and groups"
+HESA UK,"Professional bodies, collectives and groups"
+JISC,"Professional bodies, collectives and groups"
+National Acquisitions Group (NAG),"Professional bodies, collectives and groups"
+QAA (The Quality Assurance Agency),"Professional bodies, collectives and groups"
+Research Libraries UK,"Professional bodies, collectives and groups"
+Russell Group,"Professional bodies, collectives and groups"
+Social Science Space,"Professional bodies, collectives and groups"
+UCISA,"Professional bodies, collectives and groups"
+UKCORR,"Professional bodies, collectives and groups"
+UKSG,"Professional bodies, collectives and groups"
+Universities UK,"Professional bodies, collectives and groups"
+Association of British Science Writers,Research news and opinion 
+EurekAlert!,Research news and opinion 
+Guardian Universities,Research news and opinion 
+LSE Impact Blog,Research news and opinion 
+Research Information ,Research news and opinion 
+Scholarly Kitchen,Research news and opinion 
+Science Media Centre ,Research news and opinion 
+The Conversation UK,Research news and opinion 
+Times Higher Education ,Research news and opinion 
+Wonkhe,Research news and opinion 
+Altmetric,Research news and opinion 
+ASAPbio,Research news and opinion 
+British Library Open Research,Research news and opinion 
+Centre for Open Science,Research news and opinion 
+Clarivate,Research news and opinion 
+cOAlition S,Research news and opinion 
+COUNTER Metrics,Research news and opinion 
+Crossref,Research news and opinion 
+DataCite,Research news and opinion 
+Digital Science,Research news and opinion 
+Dimensions,Research news and opinion 
+Directory of Open Access Journals ,Research news and opinion 
+DORA Assessment ,Research news and opinion 
+DRYAD,Research news and opinion 
+Figshare,Research news and opinion 
+Health Data Research UK,Research news and opinion 
+Information Commissioner's Office,Research news and opinion 
+Information is Beautiful,Research news and opinion 
+Kudos,Research news and opinion 
+MalariaGEN,Research news and opinion 
+OA Works,Research news and opinion 
+Open Access Tracking Project ,Research news and opinion 
+OpenAIRE,Research news and opinion 
+Open Data Institute,Research news and opinion 
+Open Innovations,Research news and opinion 
+Open Knowledge Foundation,Research news and opinion 
+Open Science,Research news and opinion 
+ORCiD,Research news and opinion 
+Our Research,Research news and opinion 
+Overleaf,Research news and opinion 
+Overton,Research news and opinion 
+Protocols.io,Research news and opinion 
+Re3data.org,Research news and opinion 
+Research Data Alliance,Research news and opinion 
+Research On Research,Research news and opinion 
+rOpenSci,Research news and opinion 
+ScienceOpen,Research news and opinion 
+Software Sustainability Institute,Research news and opinion 
+SPARC Europe,Research news and opinion 
+UK Data Service,Research news and opinion 
+Unpaywall,Research news and opinion 
+Wikimedia UK,Research news and opinion 
+Being Human Festival,"Festivals, public engagement"
+British Science Festival ,"Festivals, public engagement"
+Do Lectures,"Festivals, public engagement"
+Festival of Debate,"Festivals, public engagement"
+Festival of The Mind,"Festivals, public engagement"
+Pint of Science UK,"Festivals, public engagement"
+Sense About Science,"Festivals, public engagement"
+Soapbox Science,"Festivals, public engagement"
+Association of University Presses,Publishers and journals
+BioMedCentral,Publishers and journals
+BMJ,Publishers and journals
+Edward Elgar Publishing,Publishers and journals
+Elsevier,Publishers and journals
+Emerald Publishing,Publishers and journals
+European Association of Science Editors (EASE),Publishers and journals
+F1000 Research,Publishers and journals
+Frontiers,Publishers and journals
+Global Policy,Publishers and journals
+Internet Archaeology,Publishers and journals
+JMIR,Publishers and journals
+JoVE - Journal of Visualized Experiements,Publishers and journals
+LSE Press,Publishers and journals
+Nature,Publishers and journals
+Octopus,Publishers and journals
+Oxford Academic,Publishers and journals
+Oxford University Press,Publishers and journals
+Palgrave Macmillan,Publishers and journals
+PLOS,Publishers and journals
+Retraction Watch,Publishers and journals
+Springer Nature,Publishers and journals
+Springer Publishing,Publishers and journals
+Taylor & Francis,Publishers and journals
+Wiley,Publishers and journals
+Jobs.ac.uk,"PhD, career development"
+PhD2Published,"PhD, career development"
+PHD Comics,"PhD, career development"
+PhD Forum,"PhD, career development"
+ESRC Centre for Population Change and Connecting Generations,Research Centres and programmes
+ESRC Connecting Generations,Research Centres and programmes
+Institute for Medical Humanities,Research Centres and programmes
+Institute for Social Marketing and Health,Research Centres and programmes
+Leverhulme Centre for Demographic Science,Research Centres and programmes
+Max Planck Institute for Demographic Research,Research Centres and programmes
+NIHR EEPRU,Research Centres and programmes
+NICE Decision Support Unit ,Research Centres and programmes
+Nuffiled Department of Primary Care Health Sciences,Research Centres and programmes
+Sheffield Hallam University,Research Centres and programmes
+European Conference on Visual Perception,Conferences
