@@ -79,7 +79,7 @@ class BlueskyOrgSearch:
             matched_accounts = []
             cursor = None
             page_count = 0
-            max_pages = 50  # Adjust as needed
+            max_pages = 100  # Adjust as needed
 
             search_term = org_words[0] if org_words else org_name
 
