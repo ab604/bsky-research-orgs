@@ -49,8 +49,8 @@ jobs:
         REPORT_DIR: ${{ env.REPORT_DIR }}
       run: |
         python bluesky-org-search.py
+        echo "REPORT_DIR=${{ env.REPORT_DIR }}" >> $GITHUB_OUTPUT
 
-    # Commit the report to the repository
     - name: Commit report to repository
       if: always()
       run: |
@@ -71,3 +71,11 @@ jobs:
       with:
         name: search-results
         path: ${{ env.REPORT_DIR }}
+
+    - name: Debug - List directory contents
+      run: |
+        echo "Working directory:"
+        ls -R
+        echo "Output directory:"
+        ls -R ${{ env.REPORT_DIR }}
+
