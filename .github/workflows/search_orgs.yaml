@@ -8,6 +8,9 @@ on:
 permissions:
     contents: write  # Add explicit permission to write to repository 
 
+env:
+  REPORT_DIR: reports
+
 jobs:
   bsky_search:
     runs-on: ubuntu-latest
