@@ -12,7 +12,8 @@ jobs:
   bsky_search:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}  # Use Github token for authentication
 
@@ -43,22 +44,22 @@ jobs:
 
     # Commit the report to the repository
     - name: Commit report to repository
-    if: always()
-    run: |
-      git config --local user.email "github-actions[bot]@users.noreply.github.com"
-      git config --local user.name "github-actions[bot]"
-      git add "${{ env.REPORT_DIR }}/*"
-      if git diff --staged --quiet; then
-        echo "No changes to commit"
-      else
-        git commit -m "Add search results for $(date +'%Y-%m-%d')"
-        git push origin HEAD:${GITHUB_REF}
-      fi
+      if: always()
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add "${{ env.REPORT_DIR }}/*"
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Add search results for $(date +'%Y-%m-%d')"
+          git push origin HEAD:${GITHUB_REF}
+        fi
 
     # Upload the report as an artifact
     - name: Upload search results
-    if: always()
-    uses: actions/upload-artifact@v4
-    with:
-      name: search-results
-      path: ${{ env.REPORT_DIR }}
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: search-results
+        path: ${{ env.REPORT_DIR }}
