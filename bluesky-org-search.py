@@ -247,7 +247,7 @@ def main():
         searcher = BlueskyOrgSearch()
         
         # Search using the CSV file
-        input_file = "test_orgs.csv"  # The CSV we created earlier
+        input_file = "uk_research_orgs.csv"  # The CSV we created earlier
         output_dir = "reports"
         os.environ['REPORT_DIR'] = output_dir
 
