@@ -1,9 +1,9 @@
 name: Bluesky Organization Search
 
-on:
-  schedule:
-    - cron: '0 0 * * 1'  # Run every Monday at midnight
-  workflow_dispatch:  # Allow manual triggering
+#on:
+ # schedule:
+ #   - cron: '0 0 * * 1'  # Run every Monday at midnight
+ # workflow_dispatch:  # Allow manual triggering
 
 permissions:
     contents: write  # Add explicit permission to write to repository 
